@@ -23,7 +23,7 @@
 		"url": "git://github.com/michaljaz/webmc.git"
 	},
 	"engines": {
-		"node": "20.x"
+		"node": "14.x"
 	},
 	"dependencies": {
 		"atob": "^2.1.2",

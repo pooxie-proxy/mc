@@ -4,6 +4,7 @@ function UrlParams (game) {
   game.nick = new URL(document.location).searchParams.get('nick')
   game.server = new URL(document.location).searchParams.get('server')
   game.proxy = new URL(document.location).searchParams.get('proxy')
+  game.key = new URL(document.location).searchParams.get('key')
   let reload = false
   if (game.nick === '' || game.nick === null) {
     reload = true
@@ -25,7 +26,7 @@ function UrlParams (game) {
     console.error('Web-minecraft in production mode needs https!')
   }
   if (reload) {
-    document.location.href = `?server=${game.server}&nick=${game.nick}&proxy=${game.proxy}`
+    document.location.href = `?server=${game.server}&nick=${game.nick}&proxy=${game.proxy}&key=${game.key}`
   }
 }
 
